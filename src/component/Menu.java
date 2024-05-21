@@ -8,17 +8,35 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JFrame;
+import modelFrondend.Model_Menu;
 public class Menu extends javax.swing.JPanel {
 
     public Menu() {
         initComponents();
         setOpaque(false);
+        listMenu1.setOpaque(false);
+        init();
     }
-
+    private void init(){
+        listMenu1.addItem(new Model_Menu("room", "ROOM", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("staff", "STAFF", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("service", "SERVICE", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("customer", "CUSTOMER", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("pay", "PAY", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("", "FOR MANAGER", Model_Menu.MenuType.TITLE));
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("statistic", "STATISTIC", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("setting", "SETTING", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("logout", "LOG OUT", Model_Menu.MenuType.MENU ));
+        
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        listMenu1 = new swing.ListMenu<>();
         PanelMoving = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -34,15 +52,15 @@ public class Menu extends javax.swing.JPanel {
             PanelMovingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelMovingLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addContainerGap())
         );
         PanelMovingLayout.setVerticalGroup(
             PanelMovingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelMovingLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -50,12 +68,14 @@ public class Menu extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelMoving, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PanelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 445, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(listMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -95,5 +115,6 @@ public class Menu extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelMoving;
     private javax.swing.JLabel jLabel1;
+    private swing.ListMenu<String> listMenu1;
     // End of variables declaration//GEN-END:variables
 }
