@@ -22,12 +22,12 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addItem(new Model_Menu("staff", "STAFF", Model_Menu.MenuType.MENU ));
         listMenu1.addItem(new Model_Menu("service", "SERVICE", Model_Menu.MenuType.MENU ));
         listMenu1.addItem(new Model_Menu("customer", "CUSTOMER", Model_Menu.MenuType.MENU ));
-        listMenu1.addItem(new Model_Menu("pay", "PAY", Model_Menu.MenuType.MENU ));
         listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
         listMenu1.addItem(new Model_Menu("", "FOR MANAGER", Model_Menu.MenuType.TITLE));
         listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
         listMenu1.addItem(new Model_Menu("statistic", "STATISTIC", Model_Menu.MenuType.MENU ));
         listMenu1.addItem(new Model_Menu("setting", "SETTING", Model_Menu.MenuType.MENU ));
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
         listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
         listMenu1.addItem(new Model_Menu("logout", "LOG OUT", Model_Menu.MenuType.MENU ));
         
